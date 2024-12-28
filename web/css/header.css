@@ -1,0 +1,79 @@
+/* 基本样式 */
+#header {
+    position: relative; /* 确保下拉菜单有正确的定位上下文 */
+}
+
+.header-container {
+    width: 100%;
+    max-width: 100%; /* 假设我们有一个最大宽度 */
+    max-height: 100px; /* 假设我们有一个最大高度 */
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* 与header高度一致 */
+}
+
+.logo {
+    width:350px; /* 根据需要调整，可以设为固定宽度，如200px */
+    height: auto; /* 保持图片比例 */
+    max-height: 80px; /* 确保图片不会超出父容器的高度 */
+    display: flex; /* 移除图片底部的间隙 */
+    margin: 10px 0 ; /* 如果需要，使图片水平居中 */
+    text-align: center; /* 可选：使图片在容器内水平居中 */
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: auto; /* 保持图片的原始比例 */
+    height: 70px;
+    max-width: 100%; /* 确保图片不会超出父容器的宽度 */
+    display: block;     /* 将图片设置为块级元素，以移除任何内联元素之间的间隙 */
+    margin:0; /* 可选：在图片之间添加垂直间距（例如10px），最后一个图片不需要此间距 */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    position: relative; /* 确保下拉菜单相对于其父元素定位 */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* 下拉菜单样式 */
+.dropdown ul {
+    display: none; /* 初始状态隐藏 */
+    position: absolute;
+    top: 100%; /* 相对于父元素底部定位 */
+    left: 0;
+    background-color: #333; /* 深色背景 */
+    min-width: 200px; /* 最小宽度 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* 确保下拉菜单在其他内容之上 */
+}
+
+.dropdown ul li {
+    width: 100%;
+}
+
+.dropdown ul a {
+    padding: 10px;
+    white-space: nowrap; /* 防止文本换行 */
+}
+
+.dropdown:hover > ul {
+    display: block; /* 鼠标悬停时显示下拉菜单 */
+}

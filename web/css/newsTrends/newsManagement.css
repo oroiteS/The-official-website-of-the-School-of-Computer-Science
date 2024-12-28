@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    position: relative; /* 确保下拉菜单有正确的定位上下文 */
+}
+
+.header-container {
+    width: 100%;
+    max-width: 100%; /* 假设我们有一个最大宽度 */
+    max-height: 80px; /* 假设我们有一个最大高度 */
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: auto; /* 保持图片的原始比例 */
+    height: 70px;
+    max-width: 100%; /* 确保图片不会超出父容器的宽度 */
+    display: block;     /* 将图片设置为块级元素，以移除任何内联元素之间的间隙 */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    position: relative; /* 确保下拉菜单相对于其父元素定位 */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 将用户信息推向右边 */
+}
+
+.user-info h6 {
+    margin-right: 10px; /* 为用户信息添加右边距 */
+}
+
+.sidebar {
+    height: 100vh;
+    width: 200px;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.sidebar a {
+    padding: 10px 15px 10px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ecf0f1;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    color: #f1c40f;
+}
+.sidebar .menu-item {
+    position: relative;
+}
+
+.sidebar .submenu a {
+    padding: 10px 15px 10px 30px;
+}
+.sidebar .icon {
+    margin-right: 10px;
+}
+.main-content {
+    margin-top: 80px;
+    margin-left: 250px; /* 与侧边栏的宽度一致 */
+    padding: 20px; /* 根据需要调整内边距 */
+    /* 确保 main-content 占据剩余空间 */
+    position: relative;
+    min-height: 100vh; /* 至少与视口高度一致 */
+    background-color: #f7f7f9; /* 背景颜色 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+/* 调整 newsRelease 和 newsManagement 的样式 */
+.newsRelease {
+    width: 600px; /* 设置固定宽度 */
+    max-width: 100%; /* 最大宽度为100%，以适应小屏幕 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 20px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影 */
+}
+.newsManagement {
+    width: 600px; /* 设置固定宽度 */
+    max-width: 100%; /* 最大宽度为100%，以适应小屏幕 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 20px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影 */
+}
+.newsDraft{
+    width: 600px; /* 设置固定宽度 */
+    max-width: 100%; /* 最大宽度为100%，以适应小屏幕 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 20px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影 */
+}
+.news-form {
+    max-width: 100%; /* 让表单宽度适应其容器 */
+    margin: 0 auto;
+}
+.news-form label {
+    display: block;
+    margin-top: 10px;
+}
+.news-form input[type="text"],
+.news-form input[type="datetime-local"],
+.news-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.news-form input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.news-form input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+.insert-image {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.insert-image:hover {
+    background-color: #ec971f;
+}
+.news-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 确保表单占满其父容器的宽度 */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 使label靠左对齐 */
+.news-form label {
+    text-align: left;
+    width: 100%; /* 使label宽度与输入框一致 */
+    display: block; /* 使label独占一行 */
+    margin-top: 10px;
+}
+
+/* 使输入框和按钮等元素水平居中 */
+.news-form input[type="text"],
+.news-form input[type="datetime-local"],
+.news-form textarea,
+.news-form input[type="submit"] {
+    width: 100%; /* 使输入框宽度与label一致 */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 包括内边距和边框在内的总宽度等于指定的宽度 */
+}
+
+/* 单独为按钮设置样式，使其居中 */
+#news-submit {
+    margin-top: 20px;
+    align-self: center; /* 使用flexbox的align-self属性使按钮居中 */
+}
+
+/*去除发布、删除、预览按钮的样式*/
+.newsDraft a {
+    display: inline-block;
+    margin-right: 10px; /* 增加按钮之间的间距 */
+    padding: 5px 10px; /* 调整按钮内边距 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 5px; /* 圆角 */
+    color: #333; /* 文字颜色 */
+}
+.newsManagement a {
+    display: inline-block;
+    margin-right: 10px; /* 增加按钮之间的间距 */
+    padding: 5px 10px; /* 调整按钮内边距 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 5px; /* 圆角 */
+    color: #333; /* 文字颜色 */
+}
+thead, tr {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(230, 189, 189);
+}
+table {
+    width: 550px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(230, 189, 189);
+}
+
+td,  th {
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: Verdana, serif;
+    color: rgb(177, 106, 104);
+}
+
+tr:nth-child(even) {
+    background: rgb(238, 211, 210)
+}
+tr:nth-child(odd) {
+    background: #FFF
+}

@@ -1,0 +1,126 @@
+/* 主要内容区域样式 */
+.content-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* 左侧菜单和右侧内容的布局 */
+.menu {
+    float: left;
+    width: 200px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.menu input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1599a7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.menu input[type="button"]:hover {
+    background-color: #157799;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+#basicInfo h3 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1599a7;
+}
+
+#basicInfo img {
+    max-width: 120px;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 3px;
+}
+
+form table input[type="text"],
+form table input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form table input[type="button"] {
+    padding: 8px 20px;
+    background-color: #1599a7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form table input[type="button"]:hover {
+    background-color: #157799;
+}
+
+.page {
+    display: none;
+}
+
+#basicInfo {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main {
+    margin-top: 100px;
+    min-height: calc(100vh - 260px);
+    background-color: #f9f9f9;
+    padding: 20px 0;
+}
+
+.btn-td{
+    text-align: center;
+}

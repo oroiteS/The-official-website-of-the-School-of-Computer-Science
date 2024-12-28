@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="final_experiment:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/final_experiment_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="final_experiment/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="final_experiment" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../apache-tomcat-11.0.0/lib/mssql-jdbc-12.6.2.jre11.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
